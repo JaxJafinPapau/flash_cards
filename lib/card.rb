@@ -7,15 +7,4 @@ class Card
     @category = category
   end
 
-  def question
-    "#{@question}"
-  end
-
-  def answer
-    "#{@answer}"
-  end
-
-  def category
-    "#{@category}".to_sym
-  end
 end
