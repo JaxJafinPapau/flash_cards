@@ -18,5 +18,4 @@ class Card
   def category
     "#{@category}".to_sym
   end
-
 end

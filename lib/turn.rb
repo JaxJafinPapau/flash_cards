@@ -1,3 +1,5 @@
+require './lib/card'
+
 class Turn
   attr_accessor :string :card
 
@@ -6,5 +8,23 @@ class Turn
     @card = card
   end
 
-  
+  def guess
+
+  end
+
+  def card
+
+  end
+
+  def correct?
+
+  end
+
+  def feedback
+
+  end
+
+end
+
+
 end
