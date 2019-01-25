@@ -1,8 +1,16 @@
+require './lib/card'
+require './lib/turn'
+require './lib/deck'
+require 'pry'
+
 class Round
 
-  def initialize
-    #array of card objects
+  def initialize(deck)
+    @deck = deck
   end
-  #needs to return cards based on a category
+  #
+  # def take_turn
+  #   #creates new turn object with guess and card
+  # end
 
 end
