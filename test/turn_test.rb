@@ -15,9 +15,9 @@ class TurnTest < Minitest::Test
 
   def test_turn_has_a_card
     card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-    fluffy = Turn.new("Juneau", card_1)
+    turn = Turn.new("Juneau", card_1)
 
-    assert_equal card_1, fluffy.card
+    assert_equal card_1, turn.card
   end
 
   def test_turn_has_a_guess
@@ -30,10 +30,11 @@ class TurnTest < Minitest::Test
   def test_the_guess_is_correct
     card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
     turn = Turn.new("Juneau", card_1)
+
     assert_equal true, turn.correct?
   end
 
-  def test_does_turn_give_positive_feedback
+  def test_does_turn_give_feedback
     card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
     turn = Turn.new("Juneau", card_1)
 
