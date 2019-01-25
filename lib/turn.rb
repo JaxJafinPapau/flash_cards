@@ -1,30 +1,25 @@
 require './lib/card'
+require 'pry'
 
 class Turn
-  attr_accessor :string :card
+  attr_reader :guess, :card
 
-  def initialize(string, card)
-    @string = string
+  def initialize(guess, card)
+    @guess = guess
     @card = card
   end
 
-  def guess
-
-  end
-
-  def card
-
-  end
-
   def correct?
-
+    if @card.answer == @guess
+      return true
+    end
   end
 
   def feedback
-
+    if correct? == true
+      p "Correct!"
+    else
+      p "Incorrect."
+    end
   end
-
-end
-
-
 end
