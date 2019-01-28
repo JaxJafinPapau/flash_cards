@@ -34,4 +34,24 @@ class Round
     end
     return total_correct
   end
+
+  def number_correct_by_category(category)
+    category_correct = 0
+    @turns.each do |turn|
+      if turn.guess == card.answer && turn.category == category
+        category_correct += 1
+      end
+    end
+  end
+
+  def percent_correct
+    number_correct.to_f / @turns.count.to_f
+  end
+
+  def percent_correct_by_category(category)
+      total_in_category = @turns.find_all do |turn|
+                            turn.category == category
+                          end
+      total_in_category.count.to_f / number_correct_by_category.to_f
+  end
 end
